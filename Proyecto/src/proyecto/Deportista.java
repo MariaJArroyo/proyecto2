@@ -18,22 +18,72 @@ public class Deportista {
         this.telefono = 0;
         this.correoElectronico = "";
     }
-    
-    public void leerDatos(){
-        nombreNino=JOptionPane.showInputDialog(null, "Digite su nombre: ");
-        Apellidos=JOptionPane.showInputDialog(null, "Digite sus apellidos: ");
-        id=Integer.parseInt(JOptionPane.showInputDialog(null, "Digite su id: "));
-        ciudad=JOptionPane.showInputDialog(null, "Digite la ciudad donde vive: ");
-        direccion=JOptionPane.showInputDialog(null, "Digite su direccion: ");
-        telefono=Integer.parseInt(JOptionPane.showInputDialog(null, "Digite su telefono: "));
-        correoElectronico=JOptionPane.showInputDialog(null, "Digite su correo electronico: ");
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNombreNino() {
+        return nombreNino;
+    }
+
+    public void setNombreNino(String nombreNino) {
+        this.nombreNino = nombreNino;
+    }
+
+    public String getApellidos() {
+        return Apellidos;
+    }
+
+    public void setApellidos(String Apellidos) {
+        this.Apellidos = Apellidos;
+    }
+
+    public String getCiudad() {
+        return ciudad;
+    }
+
+    public void setCiudad(String ciudad) {
+        this.ciudad = ciudad;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public int getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
+    }
+
+    public String getCorreoElectronico() {
+        return correoElectronico;
+    }
+
+    public void setCorreoElectronico(String correoElectronico) {
+        this.correoElectronico = correoElectronico;
+    }
+
+    public boolean isEstado() {
+        return estado;
+    }
+
+    public void setEstado(boolean estado) {
+        this.estado = estado;
     }
     
-    public void mostrarDatos(){
-        JOptionPane.showMessageDialog(null,"El nombre del deportista es "+nombreNino+Apellidos+"Su id es "+id+
-                " Vive en la Ciudad de "+ciudad+" su direccion es "+direccion+" su numero de telefono es "+telefono+
-                " y su correo electronico es "+correoElectronico+".");
-    }
+    
     
             
 }

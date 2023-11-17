@@ -3,7 +3,7 @@ package proyecto;
 import javax.swing.JOptionPane;
 
 public class Deportes {
-    public String nombreDeporte;
+    private String nombreDeporte;
     private String caracteristicas;
     private boolean estado = true;
 
@@ -11,12 +11,29 @@ public class Deportes {
         this.nombreDeporte = "";
         this.caracteristicas = "";
     }
-    public void leerDatos(){
-        nombreDeporte=JOptionPane.showInputDialog(null, "Digite el nombre del deporte: ");
-        caracteristicas=JOptionPane.showInputDialog(null, "Digite las caracteristicas del deporte: ");
+
+    public String getNombreDeporte() {
+        return nombreDeporte;
     }
-    public void mostrarDatos(){
-        JOptionPane.showMessageDialog(null,"El nombre del deporte es "+nombreDeporte+" y sus caracteristicas son "+caracteristicas+".");
+
+    public void setNombreDeporte(String nombreDeporte) {
+        this.nombreDeporte = nombreDeporte;
+    }
+
+    public String getCaracteristicas() {
+        return caracteristicas;
+    }
+
+    public void setCaracteristicas(String caracteristicas) {
+        this.caracteristicas = caracteristicas;
+    }
+
+    public boolean isEstado() {
+        return estado;
+    }
+
+    public void setEstado(boolean estado) {
+        this.estado = estado;
     }
    
     

@@ -10,14 +10,29 @@ public class Rutina {
     public Rutina(){
         this.tiempo = 0.00f;
     }
-    public void leerDatos(){
-        Deportes de =  new Deportes();
-        de.nombreDeporte=JOptionPane.showInputDialog(null, "Digite el nombre del deporte que va a escoger: ");
-        tiempo=Float.parseFloat(JOptionPane.showInputDialog(null, "Digite el tiempo de duracion: "));
+
+    public Deportes getDeporteEscoger() {
+        return deporteEscoger;
     }
-    public void mostrarDatos(){
-        JOptionPane.showMessageDialog(null,"El deporte a escojer es  "+deporteEscoger.nombreDeporte+
-                " y su tiempo es de "+tiempo+".");
+
+    public void setDeporteEscoger(Deportes deporteEscoger) {
+        this.deporteEscoger = deporteEscoger;
+    }
+
+    public float getTiempo() {
+        return tiempo;
+    }
+
+    public void setTiempo(float tiempo) {
+        this.tiempo = tiempo;
+    }
+
+    public boolean isEstado() {
+        return estado;
+    }
+
+    public void setEstado(boolean estado) {
+        this.estado = estado;
     }
     
 }
