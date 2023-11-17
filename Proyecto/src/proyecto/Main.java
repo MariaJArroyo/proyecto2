@@ -5,12 +5,7 @@ import javax.swing.JOptionPane;
 public class Main {
 
     public static void main(String[] args) {
-        Usuarios u = new Usuarios();
-        Deportista d = new Deportista();
-        Encargados e = new Encargados();
-        Deportes dp = new Deportes();
-        Rutina r = new Rutina();
-        
+        /*
         boolean ejecutar = true;
         int opcion = 0;
 
@@ -51,5 +46,5 @@ public class Main {
 
         }
     }
-
+*/
 }

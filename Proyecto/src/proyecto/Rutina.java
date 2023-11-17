@@ -35,6 +35,7 @@ public class Rutina {
         this.estado = estado;
     }
     
+    
 }
 
     
