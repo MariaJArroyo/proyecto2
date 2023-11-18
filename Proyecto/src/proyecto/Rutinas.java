@@ -1,6 +1,6 @@
 package proyecto;
 
-import javax.swing.JOptionPane;
+
 
 public class Rutinas {
     private Deportes deporteEscoger;

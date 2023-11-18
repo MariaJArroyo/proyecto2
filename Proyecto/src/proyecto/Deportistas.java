@@ -1,7 +1,7 @@
 package proyecto;
-import javax.swing.JOptionPane;
 
-public class Deportista {
+
+public class Deportistas {
     private int id;
     private String nombreNino,Apellidos;
     private String ciudad,direccion;
@@ -9,7 +9,7 @@ public class Deportista {
     private String correoElectronico;
     private boolean estado=true;
 
-    public Deportista() {
+    public Deportistas() {
         this.id =0;
         this.nombreNino ="";
         this.Apellidos = "";
