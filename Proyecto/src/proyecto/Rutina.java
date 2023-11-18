@@ -4,7 +4,7 @@ package proyecto;
 
 public class Rutina {
     
-}
+
 // Arreglos de objetos de Usuarios
 
 
@@ -30,9 +30,15 @@ public class Rutina {
 // Arreglos de objetos de deportes
 
 
-
+    
+    
+  
 
 
 
 
 // Arreglos de objetos de Rutinas
+  
+    
+
+}
