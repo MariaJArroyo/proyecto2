@@ -2,12 +2,12 @@ package proyecto;
 
 import javax.swing.JOptionPane;
 
-public class Rutina {
+public class Rutinas {
     private Deportes deporteEscoger;
     private float tiempo;
     private boolean estado=true;
 
-    public Rutina(){
+    public Rutinas(){
         this.tiempo = 0.00f;
     }
 
