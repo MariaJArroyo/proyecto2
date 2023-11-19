@@ -7,7 +7,9 @@ public class Rutina {
 // Arreglos de objetos de Usuarios
     private Usuarios infoUsuarios[] = new Usuarios[3];
     private Deportistas deportistas[] = new Deportistas[3];
-
+    private Encargados Encargados [] = new Encargados [3];
+    
+    
     public void informaciónUsuarios() {
         for (int x = 0; x < infoUsuarios.length; x++) {
             Usuarios e = new Usuarios();
@@ -56,19 +58,38 @@ public class Rutina {
             }
 
 // Arreglos de objetos de Encargados
-
+    public void Encargados() {
+        for (int i = 0; i < Encargados.length; i++) {
+            Encargados o = new Encargados();
+            JOptionPane.showMessageDialog(null, "Se solicitarán los datos del Encargado");
+            
+            o.setNombreEncargado(JOptionPane.showInputDialog(null, " Escriba el nombre del encargado:  "));
+            o.setApellidos(JOptionPane.showInputDialog(null, " Escriba los Apellidos ddel encargado: "));
+            o.setNinoCargo(JOptionPane.showInputDialog(null, " Escriba... : "));
+            o.setCiudad(JOptionPane.showInputDialog(null, " Escriba la ciudad de residencia del encargado: "));
+            o.setDireccion(JOptionPane.showInputDialog(null, " Escriba la direccion del encargado: "));
+            o.setTelefono(Integer.parseInt(JOptionPane.showInputDialog(null, " Digite numero telefonico del encargado: ")));
+            o.setCorreoElectronico(JOptionPane.showInputDialog(null, " Digite el correo Electronico del encargado: "));
+            Encargados[i] = o;
+        }
+    }
 
 
 // Arreglos de objetos de deportes
 
 
-
-
 // Arreglos de objetos de Rutinas
 
+    public void Rutinas() {
 
-
-
-        }
+         for (int i = 0; i < deportistas.length; i++) {
+        Rutinas r = new Rutinas();
+        
+            r.setDeportes(JOptionPane.showInputDialog(null, "Escriba el deporte que desea escoger: "));
+            r.setTiempo(Float.parseFloat(JOptionPane.showInputDialog(null, "Digite el tiempo: ")));
+            r.setEstado(true);
+            deportistas [i] = r;
+         }
     }
 }
+          

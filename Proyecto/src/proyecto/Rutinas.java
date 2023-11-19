@@ -34,6 +34,7 @@ public class Rutinas {
     public void setEstado(boolean estado) {
         this.estado = estado;
     }
+
     
     
 }
