@@ -5,8 +5,9 @@ import javax.swing.JOptionPane;
 public class Rutina {
     
 // Arreglos de objetos de Usuarios
- private Usuarios infoUsuarios[] = new Usuarios[1];
-     
+ private Usuarios infoUsuarios[] = new Usuarios[3];
+ private Deportistas deportistas[]=new Deportistas[3];
+ 
      public void informaciónUsuarios(){
      for(int x=0; x<infoUsuarios.length; x++){
           Usuarios e = new Usuarios();
@@ -28,11 +29,6 @@ JOptionPane.showMessageDialog(null, "Se solicitarán los datos de usuario "+x);
             }
         }
     }
-
-
-
-
-
 
 // Arreglos de objetos de Deportistas
 
