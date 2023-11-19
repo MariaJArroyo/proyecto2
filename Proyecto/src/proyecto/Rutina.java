@@ -58,7 +58,7 @@ public class Rutina {
             }
 
 // Arreglos de objetos de Encargados
-    public void Encargados() {
+    public void agregarEncargados() {
         for (int i = 0; i < Encargados.length; i++) {
             Encargados o = new Encargados();
             JOptionPane.showMessageDialog(null, "Se solicitarán los datos del Encargado");
@@ -88,7 +88,7 @@ public class Rutina {
             r.setDeportes(JOptionPane.showInputDialog(null, "Escriba el deporte que desea escoger: "));
             r.setTiempo(Float.parseFloat(JOptionPane.showInputDialog(null, "Digite el tiempo: ")));
             r.setEstado(true);
-            deportistas [i] = r;
+            
          }
     }
 }
