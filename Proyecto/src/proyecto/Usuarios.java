@@ -3,7 +3,7 @@ package proyecto;
 
 public class Usuarios {
     private String nombre,apellidos,usuario,contrasena;
-    private boolean estado= true;
+    private boolean estado= false;
     
     public Usuarios (){
         this.nombre="";

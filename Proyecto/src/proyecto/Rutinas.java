@@ -5,7 +5,7 @@ package proyecto;
 public class Rutinas {
     private Deportes deporteEscoger;
     private float tiempo;
-    private boolean estado=true;
+    private boolean estado=false;
 
     public Rutinas(){
         this.tiempo = 0.00f;
