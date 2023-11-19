@@ -8,7 +8,8 @@ public class Rutina {
     private Usuarios infoUsuarios[] = new Usuarios[3];
     private Deportistas deportistas[] = new Deportistas[3];
     private Encargados Encargados [] = new Encargados [3];
-    
+    private Deportes Deportes [] = new Deportes [3];
+    private Deportes de;
     
     public void informaciónUsuarios() {
         for (int x = 0; x < infoUsuarios.length; x++) {
@@ -76,7 +77,21 @@ public class Rutina {
 
 
 // Arreglos de objetos de deportes
-
+ public void agregarDeportes() {
+        for (int i = 0; i < Deportes.length; i++) {
+            Deportes D = new Deportes();
+            D.setNombreDeporte(JOptionPane.showInputDialog(null, "Digite el nombre del deporte"));
+            D.setCaracteristicas(JOptionPane.showInputDialog(null, "Escriba las caracteristicas del deporte"));
+            Deportes[i] = D;
+        }
+    }
+  public void consultarDeportes() {
+        String nombreDeporte = JOptionPane.showInputDialog(null, "Digite el deporte");
+        for (int i = 0; i < Deportes.length; i++) {
+            if (Deportes[i].getNombreDeporte().equals(Deportes)) {
+                JOptionPane.showMessageDialog(null, "El"+" "+Deportes[i].getNombreDeporte()+" "+"Tiene como caracteristicas:/n/n"+Deportes[i].getCaracteristicas());
+            }
+            }
 
 // Arreglos de objetos de Rutinas
 
