@@ -30,7 +30,8 @@ public class Menu {
                     + "11-Inactivar Deporte\n"
                     + "12-Consultar Rutina\n"
                     + "13-Editar Rutina\n"
-                    + "14-Inactivar Rutina\n\n"
+                    + "14-Inactivar Rutina\n"
+                    + "15-Salir del menú\n\n"
                     + "Elija una opcion :)"));
 
             switch (opcion) {
