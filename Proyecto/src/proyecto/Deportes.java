@@ -5,7 +5,7 @@ package proyecto;
 public class Deportes {
     private String nombreDeporte;
     private String caracteristicas;
-    private boolean estado = false;
+    private boolean estado = true;
 
     public Deportes() {
         this.nombreDeporte = "";

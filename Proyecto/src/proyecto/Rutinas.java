@@ -1,22 +1,26 @@
 package proyecto;
 
-
-
 public class Rutinas {
-    private Deportes deporteEscoger;
-    private float tiempo;
-    private boolean estado=false;
 
-    public Rutinas(){
+    private String deporte;
+    private float tiempo;
+    private String descripcion;
+    private String nombreRutina;
+    private boolean estado = false;
+
+    public Rutinas() {
+        this.descripcion = " ";
+        this.deporte = " ";
+        this.nombreRutina=" ";
         this.tiempo = 0.00f;
     }
 
-    public Deportes getDeporteEscoger() {
-        return deporteEscoger;
+    public String getDeporte() {
+        return deporte;
     }
 
-    public void setDeporteEscoger(Deportes deporteEscoger) {
-        this.deporteEscoger = deporteEscoger;
+    public void setDeporte(String deporte) {
+        this.deporte = deporte;
     }
 
     public float getTiempo() {
@@ -35,8 +39,20 @@ public class Rutinas {
         this.estado = estado;
     }
 
-    
-    
-}
+    public String getDescripcion() {
+        return descripcion;
+    }
 
-    
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public String getNombreRutina() {
+        return nombreRutina;
+    }
+
+    public void setNombreRutina(String nombreRutina) {
+        this.nombreRutina = nombreRutina;
+    }
+
+}

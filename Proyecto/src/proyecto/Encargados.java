@@ -8,7 +8,7 @@ public class Encargados {
     private String Ciudad, direccion;
     private int telefono;
     private String correoElectronico;
-    private boolean estado = false;
+    private boolean estado = true;
 
     public Encargados() {
         this.nombreEncargado = "";
