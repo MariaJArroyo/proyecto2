@@ -222,10 +222,15 @@ public class Rutina {
 
     public void consultarDeportes() {
         String nombreDeporte = JOptionPane.showInputDialog(null, "Digite el deporte");
+        boolean encontro = false;
         for (int i = 0; i < Deportes.length; i++) {
-            if (Deportes[i].getNombreDeporte().equals(Deportes)) {
-                JOptionPane.showMessageDialog(null, "El" + " " + Deportes[i].getNombreDeporte() + " " + "Tiene como caracteristicas:/n/n" + Deportes[i].getCaracteristicas());
+            if (Deportes[i].getNombreDeporte().equals(nombreDeporte)) {
+                JOptionPane.showMessageDialog(null, "El" + " " + Deportes[i].getNombreDeporte() + " " + "Tiene como caracteristicas:" + Deportes[i].getCaracteristicas());
+                encontro = true;
             }
+        }
+        if (encontro == false) {
+            JOptionPane.showMessageDialog(null, "No hay ningun  con el nombre: " + nombreDeporte);
         }
     }
 
@@ -288,17 +293,55 @@ public class Rutina {
                     r.setDeporte(deporte);
                 }
             } while (existe = false);
+            r.setNombreRutina(JOptionPane.showInputDialog(null, "Digite la descripcion de la rutina: "));
             r.setDescripcion(JOptionPane.showInputDialog(null, "Digite la descripcion de la rutina: "));
             r.setTiempo(Float.parseFloat(JOptionPane.showInputDialog(null, "Digite el tiempo: ")));
-            r.setEstado(true);
 
         }
     }
 
-public void consultarRutinas(){
- String NombreRutina = JOptionPane.showInputDialog(null, "Digite la rutina a consultar");
-   for (int i = 0; i < Rutinas.length; i++) {
-            if (Rutinas[i].getDescripcion().equals(NombreRutina)) {
-                JOptionPane.showMessageDialog(null, "La" + " " + Deportes[i].getNombreDeporte() + " " + "Tiene como caracteristicas:/n/n" + Deportes[i].getCaracteristicas());
-}
+    public void consultarRutinas() {
+        String nombreRutina = JOptionPane.showInputDialog(null, "Digite la rutina a consultar");
+        boolean encontro = false;
+        for (int i = 0; i < Rutinas.length; i++) {
+            if (Rutinas[i].getNombreRutina().equals(nombreRutina)) {
+                JOptionPane.showMessageDialog(null, "El nombre de la rutina es: " + Rutinas[i].getNombreRutina() + "\nSu descripcion es: " + Rutinas[i].getDescripcion()
+                        + "\nY su tiempo de duracion es de: " + Rutinas[i].getTiempo());
+                encontro = true;
+            }
+        }
+        if (encontro == false) {
+            JOptionPane.showMessageDialog(null, "No hay ningun  con el nombre: " + nombreRutina);
+        }
+    }
+
+public void editarRutina() {
+String rutinaEditar = JOptionPane.showInputDialog(null, "Digite la rutina a editar");
+        boolean encontro = false;
+          for (int i = 0; i < Rutinas.length; i++) {
+              Rutinas rutina = new Rutinas();
+          }
+            if (Rutinas[i].getNombreRutina().equals(rutinaEditar)) {
+                 int opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "Desea cambiar el nombre de la Rutina?\n 1-Si\n 2-No\n\n Ingrese una Opcion"));
+                if (opcion == 1) {
+                    rutina.setNombreRutina(JOptionPane.showInputDialog(null, " Escriba el nuevo nombre del encargado:  "));
+                }
+                opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "Desea cambiar las caracteristicas del deporte?\n 1-Si\n 2-No\n\n Ingrese una Opcion"));
+                if (opcion == 1) {
+                    deport.setCaracteristicas(JOptionPane.showInputDialog(null, " Escriba los nuevos Apellidos:  "));
+                }
+                Deportes[i] = deporte;
+                encontro = true;
+                break;
+            }
+        }
+        if (encontro == false) {
+            JOptionPane.showMessageDialog(null, "No hay ningun  con el nombre: " + deporteEditar);
+        }
+    }
+
+            
+public void inactivar 
+
+
 }
