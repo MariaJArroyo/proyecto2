@@ -25,12 +25,17 @@ public class Rutina {
 
     public void consultarUsuarios() {
         String usuarioConsultar = JOptionPane.showInputDialog(null, "Digite el usuario: ");
+        boolean encontro = false;
         for (int i = 0; i < infoUsuarios.length; i++) {
             if (infoUsuarios[i].getNombre().equals(usuarioConsultar)) {
                 JOptionPane.showMessageDialog(null, "Nombre: " + infoUsuarios[i].getNombre() + "\nApellidos: " + infoUsuarios[i].getApellidos()
                         + "\nUsurio: " + infoUsuarios[i].getUsuario() + "\nContraseña: " + infoUsuarios[i].getContrasena());
-                break;
+                encontro = true;
+
             }
+        }
+        if (encontro == false) {
+            JOptionPane.showMessageDialog(null, "No hay ningun ususario con el nombre: " + usuarioConsultar);
         }
     }
 
