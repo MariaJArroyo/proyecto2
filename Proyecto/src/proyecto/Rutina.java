@@ -15,10 +15,10 @@ public class Rutina {
         for (int i = 0; i < infoUsuarios.length; i++) {
             Usuarios usuario = new Usuarios();
             JOptionPane.showMessageDialog(null, "Se solicitarán los datos de usuario " + i);
-            usuario.setNombre(JOptionPane.showInputDialog(null, " Escriba el nombre "));
-            usuario.setApellidos(JOptionPane.showInputDialog(null, " Escriba los Apellidos: "));
-            usuario.setUsuario(JOptionPane.showInputDialog(null, " Escriba el Usuario "));
-            usuario.setContrasena(JOptionPane.showInputDialog(null, " Escriba su Contrasena "));
+            usuario.setNombre(JOptionPane.showInputDialog(null, "Escriba el nombre "));
+            usuario.setApellidos(JOptionPane.showInputDialog(null, "Escriba los Apellidos: "));
+            usuario.setUsuario(JOptionPane.showInputDialog(null, "Escriba el Usuario: "));
+            usuario.setContrasena(JOptionPane.showInputDialog(null, " Escriba su Contrasena: "));
             infoUsuarios[i] = usuario;
         }
     }
@@ -339,13 +339,13 @@ public class Rutina {
             if (Rutinas[i].getNombreRutina().equals(rutinaEditar)) {
                 int opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "Desea cambiar el nombre de la Rutina?\n 1-Si\n 2-No\n\n Ingrese una Opcion"));
                 if (opcion == 1) {
-                    rutina.setNombreRutina(JOptionPane.showInputDialog(null, " Escriba el nuevo nombre de la rutina:  "));
+                    rutina.setNombreRutina(JOptionPane.showInputDialog(null, "Escriba el nuevo nombre de la rutina:  "));
                 }
                 opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "Desea cambiar la descripcion de las rutina?\n 1-Si\n 2-No\n\n Ingrese una Opcion"));
                 if (opcion == 1) {
-                    rutina.setDescripcion(JOptionPane.showInputDialog(null, " Escriba los nuevos Apellidos:  "));
+                    rutina.setDescripcion(JOptionPane.showInputDialog(null, "Escriba la nueva descripcion de la rutina:  "));
                 }
-                opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "Escriba la nueva descripcion de las rutina\n 1-Si\n 2-No\n\n Ingrese una Opcion"));
+                opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "Desea cambiar el tiempo de la rutina?\n 1-Si\n 2-No\n\n Ingrese una Opcion"));
                 if (opcion == 1) {
                     rutina.setTiempo(Float.parseFloat(JOptionPane.showInputDialog(null, " Escriba el nuevo tiempo de la rutina:  ")));
                 }
