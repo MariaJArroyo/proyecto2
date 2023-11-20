@@ -16,9 +16,9 @@ public class Rutina {
             Usuarios usuario = new Usuarios();
             JOptionPane.showMessageDialog(null, "Se solicitarán los datos de usuario " + i);
             usuario.setNombre(JOptionPane.showInputDialog(null, " Escriba el nombre "));
-            usuario.setApellidos(JOptionPane.showInputDialog(null, " Escriba el nombre "));
-            usuario.setUsuario(JOptionPane.showInputDialog(null, " Escriba el nombre "));
-            usuario.setContrasena(JOptionPane.showInputDialog(null, " Escriba el nombre "));
+            usuario.setApellidos(JOptionPane.showInputDialog(null, " Escriba los Apellidos: "));
+            usuario.setUsuario(JOptionPane.showInputDialog(null, " Escriba el Usuario "));
+            usuario.setContrasena(JOptionPane.showInputDialog(null, " Escriba su Contrasena "));
             infoUsuarios[i] = usuario;
         }
     }
