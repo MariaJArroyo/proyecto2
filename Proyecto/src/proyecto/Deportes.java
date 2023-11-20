@@ -1,8 +1,7 @@
 package proyecto;
 
-
-
 public class Deportes {
+
     private String nombreDeporte;
     private String caracteristicas;
     private boolean estado = true;
@@ -35,6 +34,5 @@ public class Deportes {
     public void setEstado(boolean estado) {
         this.estado = estado;
     }
-   
-    
+
 }

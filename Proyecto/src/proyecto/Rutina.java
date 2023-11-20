@@ -359,7 +359,7 @@ public class Rutina {
         }
     }
 
-    public void inactivar() {
+    public void inactivarRutina() {
         String rutinaInactivar = JOptionPane.showInputDialog(null, "Digite la rutina que desea inactivar: ");
         boolean encontro = false;
         for (int i = 0; i < Rutinas.length; i++) {

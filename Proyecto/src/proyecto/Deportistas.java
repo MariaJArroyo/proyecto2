@@ -1,19 +1,19 @@
 package proyecto;
 
-
 public class Deportistas {
+
     private int id;
-    private String nombreNino,Apellidos;
-    private String ciudad,direccion;
+    private String nombreNino, Apellidos;
+    private String ciudad, direccion;
     private int telefono;
     private String correoElectronico;
-    private boolean estado=true;
+    private boolean estado = true;
 
     public Deportistas() {
-        this.id =0;
-        this.nombreNino ="";
+        this.id = 0;
+        this.nombreNino = "";
         this.Apellidos = "";
-        this.ciudad ="";
+        this.ciudad = "";
         this.direccion = "";
         this.telefono = 0;
         this.correoElectronico = "";
@@ -82,7 +82,5 @@ public class Deportistas {
     public void setEstado(boolean estado) {
         this.estado = estado;
     }
-    
-    
-            
+
 }

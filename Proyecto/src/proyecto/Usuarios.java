@@ -1,16 +1,16 @@
 package proyecto;
 
-
 public class Usuarios {
-    private String nombre,apellidos,usuario,contrasena;
-    private boolean estado= true;
-    
-    public Usuarios (){
-        this.nombre="";
-        this.usuario="";
-        this.apellidos="";
-        this.contrasena="";
-        this.estado=true;
+
+    private String nombre, apellidos, usuario, contrasena;
+    private boolean estado = true;
+
+    public Usuarios() {
+        this.nombre = "";
+        this.usuario = "";
+        this.apellidos = "";
+        this.contrasena = "";
+        this.estado = true;
     }
 
     public boolean isEstado() {
@@ -52,8 +52,5 @@ public class Usuarios {
     public void setContrasena(String contrasena) {
         this.contrasena = contrasena;
     }
-    
-    
-    
-    
+
 }

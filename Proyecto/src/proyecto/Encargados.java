@@ -1,9 +1,8 @@
 package proyecto;
 
-import javax.swing.JOptionPane;
-
 public class Encargados {
-    private String nombreEncargado,Apellidos;
+
+    private String nombreEncargado, Apellidos;
     private String ninoCargo;
     private String Ciudad, direccion;
     private int telefono;
@@ -84,5 +83,4 @@ public class Encargados {
         this.estado = estado;
     }
 
-    
 }
