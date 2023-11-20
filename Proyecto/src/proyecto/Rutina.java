@@ -1,3 +1,4 @@
+// Prueba
 package proyecto;
 
 import javax.swing.JOptionPane;
