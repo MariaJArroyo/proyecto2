@@ -6,11 +6,11 @@ import javax.swing.JOptionPane;
 public class Rutina {
 
 // Arreglos de objetos de Usuarios
-    private Usuarios infoUsuarios[] = new Usuarios[3];
-    private Deportistas deportistas[] = new Deportistas[3];
-    private Encargados Encargados[] = new Encargados[3];
-    private Deportes Deportes[] = new Deportes[3];
-    private Rutinas Rutinas[] = new Rutinas[3];
+    private Usuarios infoUsuarios[] = new Usuarios[2];
+    private Deportistas deportistas[] = new Deportistas[2];
+    private Encargados Encargados[] = new Encargados[2];
+    private Deportes Deportes[] = new Deportes[2];
+    private Rutinas Rutinas[] = new Rutinas[2];
 
     public void agregarUsuarios() {
         for (int i = 0; i < infoUsuarios.length; i++) {
@@ -26,12 +26,17 @@ public class Rutina {
 
     public void consultarUsuarios() {
         String usuarioConsultar = JOptionPane.showInputDialog(null, "Digite el usuario: ");
+        boolean encontro = false;
         for (int i = 0; i < infoUsuarios.length; i++) {
             if (infoUsuarios[i].getNombre().equals(usuarioConsultar)) {
                 JOptionPane.showMessageDialog(null, "Nombre: " + infoUsuarios[i].getNombre() + "\nApellidos: " + infoUsuarios[i].getApellidos()
                         + "\nUsurio: " + infoUsuarios[i].getUsuario() + "\nContraseña: " + infoUsuarios[i].getContrasena());
-                break;
+                encontro = true;
+
             }
+        }
+        if (encontro == false) {
+            JOptionPane.showMessageDialog(null, "No hay ningun ususario con el nombre: " + usuarioConsultar);
         }
     }
 

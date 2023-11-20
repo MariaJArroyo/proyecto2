@@ -14,7 +14,7 @@ public class Menu {
         r.agregarRutinas();
 
         int opcion = 0;
-        while (opcion != 14) {
+        while (opcion != 15) {
             opcion = Integer.parseInt(JOptionPane.showInputDialog(null,
                     "Menu \n\n"
                     + "1-Consultar Usuario\n"
@@ -31,6 +31,7 @@ public class Menu {
                     + "12-Consultar Rutina\n"
                     + "13-Editar Rutina\n"
                     + "14-Inactivar Rutina\n\n"
+                    + "15-Salir"
                     + "Elija una opcion :)"));
 
             switch (opcion) {
