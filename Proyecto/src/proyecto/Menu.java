@@ -12,9 +12,11 @@ public class Menu {
         r.agregarEncargados();
         r.agregarDeportes();
         r.agregarRutinas();
+        r.facturacion();
+        r.facturacion();
 
         int opcion = 0;
-        while (opcion != 15) {
+        while (opcion != 17) {
             opcion = Integer.parseInt(JOptionPane.showInputDialog(null,
                     "Menu \n\n"
                     + "1-Consultar Usuario\n"
@@ -31,9 +33,9 @@ public class Menu {
                     + "12-Consultar Rutina\n"
                     + "13-Editar Rutina\n"
                     + "14-Inactivar Rutina\n"
-                    + "15-Salir del menú\n\n"
-                    + "14-Inactivar Rutina\n"
-                    + "15-Salir\n"
+                    + "15-Factura\n"
+                    + "16-Inactivar Factura\n"
+                    + "17-Salir \n\n"
                     + "Elija una opcion :)"));
 
             switch (opcion) {
@@ -80,6 +82,12 @@ public class Menu {
                     r.inactivarRutina();
                     break;
                 case 15:
+                    r.mostrarfactura();
+                    break;
+                case 16:
+                    r.anularfactura();
+                    break;
+                case 17:
                     System.exit(0);
                     JOptionPane.showMessageDialog(null, "Ha salido del sistema");
                     break;
