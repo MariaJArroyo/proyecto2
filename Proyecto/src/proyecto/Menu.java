@@ -80,6 +80,12 @@ public class Menu {
                     r.inactivarRutina();
                     break;
                 case 15:
+                    r.mostrarfactura();
+                    break;
+                case 16:
+                    r.anularfactura();
+                    break;
+                case 17:
                     System.exit(0);
                     JOptionPane.showMessageDialog(null, "Ha salido del sistema");
                     break;
