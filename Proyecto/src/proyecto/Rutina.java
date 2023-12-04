@@ -5,14 +5,13 @@ import javax.swing.JOptionPane;
 public class Rutina {
 
 // Arreglos de objetos de Usuarios
-    private Usuarios infoUsuarios[] = new Usuarios[2];
-    private Deportistas deportistas[] = new Deportistas[2];
-    private Encargados Encargados[] = new Encargados[2];
-    private Deportes Deportes[] = new Deportes[2];
-    private Rutinas Rutinas[] = new Rutinas[2];
-    private Facturas Facturas[] = new Facturas[2];  
-    
-    
+    private Usuarios infoUsuarios[] = new Usuarios[1];
+    private Deportistas deportistas[] = new Deportistas[1];
+    private Encargados Encargados[] = new Encargados[1];
+    private Deportes Deportes[] = new Deportes[1];
+    private Rutinas Rutinas[] = new Rutinas[1];
+    private Facturas Facturas[] = new Facturas[1];
+
     public void agregarUsuarios() {
         for (int i = 0; i < infoUsuarios.length; i++) {
             Usuarios usuario = new Usuarios();
@@ -382,39 +381,38 @@ public class Rutina {
         }
     }
 
-
- public void facturacion() {
-     for (int i = 0; i < infoUsuarios.length; i++) {
+    public void facturacion() {
+        for (int i = 0; i < infoUsuarios.length; i++) {
             Facturas factura = new Facturas();
-     
-     factura.setNombrec(JOptionPane.showInputDialog(null, "Escriba el nombre del cliente: "));
-     factura.setFechaf(JOptionPane.showInputDialog(null, "Digite la fecha: "));
-     factura.setIdentificacion(JOptionPane.showInputDialog(null, "Digite el numero de identificación: "));
-     factura.setDireccion(JOptionPane.showInputDialog(null, "Escriba la dirección: "));
-     factura.setNumeroc(JOptionPane.showInputDialog(null, "Digite el numero de teléfono: "));
-     factura.setPagar(Double.parseDouble(JOptionPane.showInputDialog(null, "Digite el total a pagar: ")));
-     Facturas [i] = factura;
-     
-    
- }
- }
- 
- public void mostrarfactura () {
-     String consultarFactura = JOptionPane.showInputDialog(null, "Digite el nombre del cliente: ");
+
+            factura.setNombrec(JOptionPane.showInputDialog(null, "Escriba el nombre del cliente: "));
+            factura.setFechaf(JOptionPane.showInputDialog(null, "Digite la fecha: "));
+            factura.setIdentificacion(JOptionPane.showInputDialog(null, "Digite el numero de identificación: "));
+            factura.setDireccion(JOptionPane.showInputDialog(null, "Escriba la dirección: "));
+            factura.setNumeroc(JOptionPane.showInputDialog(null, "Digite el numero de teléfono: "));
+            factura.setPagar(Double.parseDouble(JOptionPane.showInputDialog(null, "Digite el total a pagar: ")));
+            Facturas[i] = factura;
+
+        }
+    }
+
+    public void mostrarfactura() {
+        String consultarFactura = JOptionPane.showInputDialog(null, "Digite el nombre del cliente: ");
         boolean encontro = false;
         for (int i = 0; i < Facturas.length; i++) {
             if (Facturas[i].getNombrec().equals(consultarFactura)) {
-                JOptionPane.showMessageDialog(null, " Nombre: " + Facturas[i].getNombrec() + "\nNumero de identificación:" + Facturas[i].getIdentificacion() 
-                        + "\nFecha: " + Facturas[i].getFechaf() + "\nNumero de Telefono: " + Facturas [i].getNumeroc ()+ "\n Total a pagar: " + Facturas[i].getPagar() );
+                JOptionPane.showMessageDialog(null, " Nombre: " + Facturas[i].getNombrec() + "\nNumero de identificación:" + Facturas[i].getIdentificacion()
+                        + "\nFecha: " + Facturas[i].getFechaf() + "\nNumero de Telefono: " + Facturas[i].getNumeroc() + "\n Total a pagar: " + Facturas[i].getPagar());
                 encontro = true;
+
             }
         }
         if (encontro == false) {
             JOptionPane.showMessageDialog(null, "No hay ningun dato con el nombre: " + consultarFactura);
         }
     }
- 
- public void anularfactura() {
+
+    public void anularfactura() {
         String cliente = JOptionPane.showInputDialog(null, "Digite el nombre del cliente de la factura que desea anular: ");
         boolean encontro = false;
         for (int i = 0; i < Facturas.length; i++) {
@@ -429,6 +427,4 @@ public class Rutina {
             JOptionPane.showMessageDialog(null, "No hay ninguna factura con el nombre: " + cliente);
         }
     }
- }
-
-
+}

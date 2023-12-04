@@ -12,6 +12,7 @@ public class Menu {
         r.agregarEncargados();
         r.agregarDeportes();
         r.agregarRutinas();
+        r.facturacion();
 
         int opcion = 0;
         while (opcion != 17) {
