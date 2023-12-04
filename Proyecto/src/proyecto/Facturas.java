@@ -3,14 +3,15 @@ package proyecto;
 
 import javax.swing.JOptionPane;
 
-public class factuara {
+public class Facturas {
     
     private String nombrec;
     private String fechaf;
     private String numeroc;
     private String direccion;
     private String identificacion;
-    private double pagar;   
+    private double pagar; 
+   private boolean estado = true;
 
     public String getNombrec() {
         return nombrec;
@@ -58,6 +59,14 @@ public class factuara {
 
     public void setPagar(double pagar) {
         this.pagar = pagar;
+    }
+
+    public boolean isEstado() {
+        return estado;
+    }
+
+    public void setEstado(boolean estado) {
+        this.estado = estado;
     }
     
     
