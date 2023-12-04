@@ -10,7 +10,9 @@ public class Rutina {
     private Encargados Encargados[] = new Encargados[2];
     private Deportes Deportes[] = new Deportes[2];
     private Rutinas Rutinas[] = new Rutinas[2];
-
+    private Factura fact[] = new Factura[2];  
+    
+    
     public void agregarUsuarios() {
         for (int i = 0; i < infoUsuarios.length; i++) {
             Usuarios usuario = new Usuarios();
@@ -379,4 +381,12 @@ public class Rutina {
             JOptionPane.showMessageDialog(null, "No hay ninguna rutina  con el nombre: " + rutinaInactivar);
         }
     }
-}
+
+
+ public void facturacion() {
+     JOptionPane.showMessageDialog(null, "*** Facturación *** ");
+     fact.set
+     
+     
+ }
+ }
