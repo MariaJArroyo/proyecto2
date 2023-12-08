@@ -13,7 +13,7 @@ public class Menu {
         r.agregarDeportes();
         r.agregarRutinas();
         r.facturacion();
-        r.facturacion();
+        
 
         int opcion = 0;
         while (opcion != 17) {
@@ -34,7 +34,7 @@ public class Menu {
                     + "13-Editar Rutina\n"
                     + "14-Inactivar Rutina\n"
                     + "15-Factura\n"
-                    + "16-Inactivar Factura\n"
+                    + "16-Anular Factura\n"
                     + "17-Salir \n\n"
                     + "Elija una opcion :)"));
 
