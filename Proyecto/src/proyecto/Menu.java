@@ -197,7 +197,7 @@ public class Menu {
         while (opcion != 5) {
             opcion = Integer.parseInt(JOptionPane.showInputDialog(null,
                     "***Menu Rutinas***\n"
-                    + "1- Agregar Rutina"
+                    + "1- Agregar Rutina\n"
                     + "2- Consultar Rutina\n"
                     + "3- Editar Rutina\n"
                     + "4- Inactivar Rutina\n"

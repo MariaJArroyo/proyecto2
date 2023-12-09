@@ -29,7 +29,7 @@ public class Rutina {
         boolean encontro = false;
         for (int i = 0; i < infoUsuarios.length; i++) {
             if (infoUsuarios[i].getNombre().equals(usuarioConsultar)) {
-                JOptionPane.showMessageDialog(null, "Nombre: " + infoUsuarios[i].getNombre() + "\nApellidos: " + infoUsuarios[i].getApellidos()
+                JOptionPane.showMessageDialog(null, "---Usuario---\n"+"Nombre: " + infoUsuarios[i].getNombre() + "\nApellidos: " + infoUsuarios[i].getApellidos()
                         + "\nUsurio: " + infoUsuarios[i].getUsuario() + "\nContraseña: " + infoUsuarios[i].getContrasena());
                 encontro = true;
 
@@ -76,7 +76,7 @@ public class Rutina {
         boolean encontro = false;
         for (int i = 0; i < deportistas.length; i++) {
             if (deportistas[i].getNombreNino().equals(DeportistaConsultar)) {
-                JOptionPane.showMessageDialog(null, "Nombre: " + deportistas[i].getNombreNino() + " " + deportistas[i].getApellidos()
+                JOptionPane.showMessageDialog(null, "---Deportista---\n"+"Nombre: " + deportistas[i].getNombreNino() + " " + deportistas[i].getApellidos()
                         + "\nCiudad: " + deportistas[i].getCiudad() + "\nDireccion: " + deportistas[i].getDireccion()
                         + "\nCorreo Electronico:" + deportistas[i].getCorreoElectronico() + "\nNumero de telefono: " + deportistas[i].getTelefono());
                 encontro = true;
@@ -164,7 +164,7 @@ public class Rutina {
         boolean encontro = false;
         for (int i = 0; i < Encargados.length; i++) {
             if (Encargados[i].getNombreEncargado().equals(EncargadoConsultar)) {
-                JOptionPane.showMessageDialog(null, " Nombre: " + Encargados[i].getNombreEncargado() + " " + Encargados[i].getApellidos()
+                JOptionPane.showMessageDialog(null, "---Encargado--\n-"+"Nombre: " + Encargados[i].getNombreEncargado() + " " + Encargados[i].getApellidos()
                         + "\nEl nombre del nino que esta acargo" + Encargados[i].getNinoCargo() + " \nLa ciudad que reside: " + Encargados[i].getCiudad()
                         + "\nLa direccion en la que reside: " + Encargados[i].getDireccion() + "\nSu numero de telefono es: " + Encargados[i].getTelefono()
                         + " \nSu correo electronico es:" + Encargados[i].getCorreoElectronico());
@@ -247,7 +247,7 @@ public class Rutina {
         boolean encontro = false;
         for (int i = 0; i < Deportes.length; i++) {
             if (Deportes[i].getNombreDeporte().equals(nombreDeporte)) {
-                JOptionPane.showMessageDialog(null, "El" + " " + Deportes[i].getNombreDeporte() + " " + "Tiene como caracteristicas:" + Deportes[i].getCaracteristicas());
+                JOptionPane.showMessageDialog(null, "---Deporte---\n"+"El" + " " + Deportes[i].getNombreDeporte() + "\nTiene como caracteristicas:" + Deportes[i].getCaracteristicas());
                 encontro = true;
             }
         }
@@ -318,6 +318,7 @@ public class Rutina {
             r.setNombreRutina(JOptionPane.showInputDialog(null, "Digite el nombre de la rutina: "));
             r.setDescripcion(JOptionPane.showInputDialog(null, "Digite la descripcion de la rutina: "));
             r.setTiempo(Float.parseFloat(JOptionPane.showInputDialog(null, "Digite el tiempo: ")));
+            Rutinas[i]=r;
 
         }
     }
@@ -327,13 +328,13 @@ public class Rutina {
         boolean encontro = false;
         for (int i = 0; i < Rutinas.length; i++) {
             if (Rutinas[i].getNombreRutina().equals(nombreRutina)) {
-                JOptionPane.showMessageDialog(null, "El nombre de la rutina es: " + Rutinas[i].getNombreRutina() + "\nSu descripcion es: " + Rutinas[i].getDescripcion()
+                JOptionPane.showMessageDialog(null, "---Rutina---\n"+"El nombre de la rutina es: " + Rutinas[i].getNombreRutina() + "\nSu descripcion es: " + Rutinas[i].getDescripcion()
                         + "\nY su tiempo de duracion es de: " + Rutinas[i].getTiempo());
                 encontro = true;
             }
         }
         if (encontro == false) {
-            JOptionPane.showMessageDialog(null, "No hay ningun  con el nombre: " + nombreRutina);
+            JOptionPane.showMessageDialog(null, "No hay ninguna rutina  con el nombre: " + nombreRutina);
         }
     }
 
@@ -446,7 +447,7 @@ public class Rutina {
                     }
                 }
 
-                JOptionPane.showMessageDialog(null, " Numero de factura: " + Facturas[i].getNumero_Factura() + "\nNombre del cliente:" + Facturas[i].getCliente() + "\nDirección del cliente:" + d.getDireccion()
+                JOptionPane.showMessageDialog(null, "---Factura---\n"+" Numero de factura: " + Facturas[i].getNumero_Factura() + "\nNombre del cliente:" + Facturas[i].getCliente() + "\nDirección del cliente:" + d.getDireccion()
                         + "\nFecha: " + Facturas[i].getFecha() + "\nHora: " + Facturas[i].getHora() + "\n Pago mensual: " + Facturas[i].getPago_Mensual()
                         + "\n Rutina: " + Facturas[i].getRutina() + "\n Descripción: " + r.getDescripcion());
                 encontro = true;
