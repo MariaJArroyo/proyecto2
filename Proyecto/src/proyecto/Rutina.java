@@ -5,17 +5,17 @@ import javax.swing.JOptionPane;
 public class Rutina {
 
 // Arreglos de objetos de Usuarios
-    private Usuarios infoUsuarios[] = new Usuarios[2];
-    private Deportistas deportistas[] = new Deportistas[2];
-    private Encargados Encargados[] = new Encargados[2];
-    private Deportes Deportes[] = new Deportes[2];
-    private Rutinas Rutinas[] = new Rutinas[2];
-    private Facturas Facturas[] = new Facturas[2];
+    private Usuarios infoUsuarios[] = new Usuarios[1];
+    private Deportistas deportistas[] = new Deportistas[1];
+    private Encargados Encargados[] = new Encargados[1];
+    private Deportes Deportes[] = new Deportes[1];
+    private Rutinas Rutinas[] = new Rutinas[1];
+    private Facturas Facturas[] = new Facturas[1];
 
     public void agregarUsuarios() {
         for (int i = 0; i < infoUsuarios.length; i++) {
             Usuarios usuario = new Usuarios();
-            JOptionPane.showMessageDialog(null, "Se solicitarán los datos de usuario " + i);
+            JOptionPane.showMessageDialog(null, "Se solicitarán los datos de usuario ");
             usuario.setNombre(JOptionPane.showInputDialog(null, "Escriba el nombre: "));
             usuario.setApellidos(JOptionPane.showInputDialog(null, "Escriba los Apellidos: "));
             usuario.setUsuario(JOptionPane.showInputDialog(null, "Escriba el Usuario: "));
@@ -286,7 +286,7 @@ public class Rutina {
         for (int i = 0; i < Deportes.length; i++) {
             Deportes deporte = new Deportes();
             if (Deportes[i].getNombreDeporte().equals(deporteInactivar)) {
-                deporte.setEstado(encontro);
+                deporte.setEstado(false);
                 Deportes[i] = deporte;
                 encontro = true;
             }
@@ -338,7 +338,7 @@ public class Rutina {
     }
 
     public void editarRutina() {
-        String rutinaEditar = JOptionPane.showInputDialog(null, "Digite la rutina a editar");
+        String rutinaEditar = JOptionPane.showInputDialog(null, "Digite la rutina a editar: ");
         boolean encontro = false;
         for (int i = 0; i < Rutinas.length; i++) {
             Rutinas rutina = new Rutinas();
@@ -371,9 +371,10 @@ public class Rutina {
         for (int i = 0; i < Rutinas.length; i++) {
             Rutinas rutina = new Rutinas();
             if (Rutinas[i].getNombreRutina().equals(rutinaInactivar)) {
-                rutina.setEstado(encontro);
+                rutina.setEstado(false);
                 Rutinas[i] = rutina;
                 encontro = true;
+                break;
             }
         }
         if (encontro == false) {
@@ -382,26 +383,72 @@ public class Rutina {
     }
 
     public void facturacion() {
-        JOptionPane.showMessageDialog(null, "*** Facturación *** ");
+        JOptionPane.showMessageDialog(null, "---- Factura----");
         for (int i = 0; i < Facturas.length; i++) {
             Facturas factura = new Facturas();
-            factura.setNombrec(JOptionPane.showInputDialog(null, "Escriba el nombre del cliente: "));
-            factura.setFechaf(JOptionPane.showInputDialog(null, "Digite la fecha: "));
-            factura.setIdentificacion(JOptionPane.showInputDialog(null, "Digite el numero de identificación: "));
-            factura.setDireccion(JOptionPane.showInputDialog(null, "Escriba la dirección: "));
-            factura.setNumeroc(JOptionPane.showInputDialog(null, "Digite el numero de teléfono: "));
-            factura.setPagar(Double.parseDouble(JOptionPane.showInputDialog(null, "Digite el total a pagar: ")));
+
+            factura.setHora(JOptionPane.showInputDialog(null, "Digite la hora de pago: "));
+            factura.setFecha(JOptionPane.showInputDialog(null, "Digite la fecha de pago: "));
+            factura.setNumero_Factura(JOptionPane.showInputDialog(null, "Digite el número de factura: "));
+            factura.setPago_Mensual(Float.parseFloat(JOptionPane.showInputDialog(null, "Digite el pago mensual: ")));
+            boolean existe = false;
+
+            do {
+                String rutina = JOptionPane.showInputDialog(null, "Digite la rutina: ");
+                for (int j = 0; j < Rutinas.length; j++) {
+                    if (Rutinas[j].getNombreRutina().equals(rutina)) {
+                        factura.setRutina(rutina);
+                        existe = true;
+                        break;
+                    }
+                }
+                if (existe == false) {
+                    JOptionPane.showMessageDialog(null, "La rutina " + rutina + ", no existe. Por favor volver a digitarla");
+                }
+            } while (existe == false);
+            existe = false;
+            do {
+                String cliente = JOptionPane.showInputDialog(null, "Digite el cliente (nombre del niño): ");
+                for (int j = 0; j < deportistas.length; j++) {
+                    if (deportistas[j].getNombreNino().equals(cliente)) {
+                        factura.setCliente(cliente);
+                        existe = true;
+                        break;
+                    }
+                }
+
+                if (existe == false) {
+                    JOptionPane.showMessageDialog(null, "El cliente " + cliente + ", no existe. Por favor volver a digitarlo");
+                }
+            } while (existe == false);
+            factura.setEstado(true);
             Facturas[i] = factura;
+
         }
     }
 
     public void mostrarfactura() {
-        String consultarFactura = JOptionPane.showInputDialog(null, "Digite el nombre del cliente: ");
+        String consultarFactura = JOptionPane.showInputDialog(null, "Digite el número de factura que desea mostrar: ");
         boolean encontro = false;
         for (int i = 0; i < Facturas.length; i++) {
-            if (Facturas[i].getNombrec().equals(consultarFactura)) {
-                JOptionPane.showMessageDialog(null, " Nombre: " + Facturas[i].getNombrec() + "\nNumero de identificación:" + Facturas[i].getIdentificacion()
-                        + "\nFecha: " + Facturas[i].getFechaf() + "\nNumero de Telefono: " + Facturas[i].getNumeroc() + "\n Total a pagar: " + Facturas[i].getPagar());
+            if (Facturas[i].getNumero_Factura().equals(consultarFactura)) {
+                Rutinas r = new Rutinas();
+                for (int j = 0; j < Rutinas.length; j++) {
+                    if (Facturas[i].getRutina().equals(Rutinas[j].getNombreRutina())) {
+                        r = Rutinas[j];
+                    }
+                }
+                Deportistas d = new Deportistas();
+
+                for (int j = 0; j < deportistas.length; j++) {
+                    if (Facturas[i].getCliente().equals(deportistas[j].getNombreNino())) {
+                        d = deportistas[j];
+                    }
+                }
+
+                JOptionPane.showMessageDialog(null, " Numero de factura: " + Facturas[i].getNumero_Factura() + "\nNombre del cliente:" + Facturas[i].getCliente() + "\nDirección del cliente:" + d.getDireccion()
+                        + "\nFecha: " + Facturas[i].getFecha() + "\nHora: " + Facturas[i].getHora() + "\n Pago mensual: " + Facturas[i].getPago_Mensual()
+                        + "\n Rutina: " + Facturas[i].getRutina() + "\n Descripción: " + r.getDescripcion());
                 encontro = true;
             }
         }
@@ -415,7 +462,7 @@ public class Rutina {
         boolean encontro = false;
         for (int i = 0; i < Facturas.length; i++) {
             Facturas factura = new Facturas();
-            if (Facturas[i].getNombrec().equals(numero)) {
+            if (Facturas[i].getNumero_Factura().equals(numero)) {
                 factura.setEstado(false);
                 Facturas[i] = factura;
                 encontro = true;

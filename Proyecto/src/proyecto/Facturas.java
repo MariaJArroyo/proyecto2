@@ -1,72 +1,81 @@
 package proyecto;
 
-import javax.swing.JOptionPane;
 
 public class Facturas {
 
-    private String nombrec;
-    private String fechaf;
-    private String numeroc;
-    private String direccion;
-    private String identificacion;
-    private boolean Estado;
-    private double pagar;
+    private String Hora;
+    private String Fecha;
+    private String Numero_Factura;
+    private double Pago_Mensual;
+    private String Rutina;
+    private String Cliente;
+    private Boolean Estado;
 
-    public String getNombrec() {
-        return nombrec;
+    public Facturas() {
+        this.Hora = " ";
+        this.Fecha = " ";
+        this.Numero_Factura = " ";
+        this.Pago_Mensual = 0;
+        this.Rutina = "";
+        this.Cliente = "";
+        this.Estado = true;
+
     }
 
-    public void setNombrec(String nombrec) {
-        this.nombrec = nombrec;
+    public String getHora() {
+        return Hora;
     }
 
-    public String getFechaf() {
-        return fechaf;
+    public void setHora(String Hora) {
+        this.Hora = Hora;
     }
 
-    public void setFechaf(String fechaf) {
-        this.fechaf = fechaf;
+    public String getFecha() {
+        return Fecha;
     }
 
-    public String getNumeroc() {
-        return numeroc;
+    public void setFecha(String Fecha) {
+        this.Fecha = Fecha;
     }
 
-    public void setNumeroc(String numeroc) {
-        this.numeroc = numeroc;
+    public String getNumero_Factura() {
+        return Numero_Factura;
     }
 
-    public String getDireccion() {
-        return direccion;
+    public void setNumero_Factura(String Numero_Factura) {
+        this.Numero_Factura = Numero_Factura;
     }
 
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
+    public double getPago_Mensual() {
+        return Pago_Mensual;
     }
 
-    public String getIdentificacion() {
-        return identificacion;
+    public void setPago_Mensual(double Pago_Mensual) {
+        this.Pago_Mensual = Pago_Mensual;
     }
 
-    public void setIdentificacion(String identificacion) {
-        this.identificacion = identificacion;
+    public String getRutina() {
+        return Rutina;
     }
 
-    public double getPagar() {
-        return pagar;
+    public void setRutina(String Rutina) {
+        this.Rutina = Rutina;
     }
 
-    public void setPagar(double pagar) {
-        this.pagar = pagar;
+    public String getCliente() {
+        return Cliente;
     }
 
-    public boolean isEstado() {
+    public void setCliente(String Cliente) {
+        this.Cliente = Cliente;
+    }
+
+    public Boolean getEstado() {
         return Estado;
     }
 
-    public void setEstado(boolean Estado) {
+    public void setEstado(Boolean Estado) {
         this.Estado = Estado;
     }
 
-    
 }
