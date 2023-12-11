@@ -4,12 +4,12 @@ import javax.swing.JOptionPane;
 
 public class Rutina {
 
-    private Usuarios infoUsuarios[] = new Usuarios[2];
-    private Deportistas deportistas[] = new Deportistas[2];
-    private Encargados Encargados[] = new Encargados[2];
-    private Deportes Deportes[] = new Deportes[2];
-    private Rutinas Rutinas[] = new Rutinas[2];
-    private Facturas Facturas[] = new Facturas[2];
+    private Usuarios infoUsuarios[] = new Usuarios[1];
+    private Deportistas deportistas[] = new Deportistas[1];
+    private Encargados Encargados[] = new Encargados[1];
+    private Deportes Deportes[] = new Deportes[1];
+    private Rutinas Rutinas[] = new Rutinas[1];
+    private Facturas Facturas[] = new Facturas[1];
 
     // Arreglos de objetos de Usuarios
     public void agregarUsuarios() {
@@ -180,7 +180,7 @@ public class Rutina {
         String encargadoEditar = JOptionPane.showInputDialog(null, "Digite el Encargado que desea cambiar de la informacion: ");
         boolean encontro = false;
         for (int i = 0; i < Encargados.length; i++) {
-            Encargados encargado =Encargados[i];
+            Encargados encargado = Encargados[i];
             if (deportistas[i].getNombreNino().equals(encargadoEditar)) {
                 int opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "Desea cambiar el nombre?\n 1-Si\n 2-No\n\n Ingrese una Opcion"));
                 if (opcion == 1) {
@@ -247,7 +247,7 @@ public class Rutina {
         boolean encontro = false;
         for (int i = 0; i < Deportes.length; i++) {
             if (Deportes[i].getNombreDeporte().equals(nombreDeporte)) {
-                JOptionPane.showMessageDialog(null, "---Deporte---\n" + "El" + " " + Deportes[i].getNombreDeporte() + "\nTiene como caracteristicas:" + Deportes[i].getCaracteristicas());
+                JOptionPane.showMessageDialog(null, "---Deporte---\n" + "El" + " " + Deportes[i].getNombreDeporte() + "\nCuenta con estas caracteristicas:" + Deportes[i].getCaracteristicas());
                 encontro = true;
             }
         }
@@ -343,15 +343,15 @@ public class Rutina {
         for (int i = 0; i < Rutinas.length; i++) {
             Rutinas rutina = Rutinas[i];
             if (Rutinas[i].getNombreRutina().equals(rutinaEditar)) {
-                int opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "Desea cambiar el nombre de la Rutina?\n 1-Si\n 2-No\n\n Ingrese una Opcion"));
+                int opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "Desea cambiar el nombre de la Rutina?\n 1-Si\n 2-No\n Ingrese una Opcion"));
                 if (opcion == 1) {
                     rutina.setNombreRutina(JOptionPane.showInputDialog(null, "Escriba el nuevo nombre de la rutina:  "));
                 }
-                opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "Desea cambiar la descripcion de las rutina?\n 1-Si\n 2-No\n\n Ingrese una Opcion"));
+                opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "Desea cambiar la descripcion de las rutina?\n 1-Si\n 2-No\n Ingrese una Opcion"));
                 if (opcion == 1) {
                     rutina.setDescripcion(JOptionPane.showInputDialog(null, "Escriba la nueva descripcion de la rutina:  "));
                 }
-                opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "Desea cambiar el tiempo de la rutina?\n 1-Si\n 2-No\n\n Ingrese una Opcion"));
+                opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "Desea cambiar el tiempo de la rutina?\n 1-Si\n 2-No\n Ingrese una Opcion"));
                 if (opcion == 1) {
                     rutina.setTiempo(JOptionPane.showInputDialog(null, " Escriba el nuevo tiempo de la rutina:  "));
                 }
@@ -409,7 +409,7 @@ public class Rutina {
             existe = false;
 
             do {
-                String cliente = JOptionPane.showInputDialog(null, "Digite el cliente (nombre del niño): ");
+                String cliente = JOptionPane.showInputDialog(null, "Digite el cliente (nombre del deportista): ");
                 for (int j = 0; j < deportistas.length; j++) {
                     if (deportistas[j].getNombreNino().equals(cliente)) {
                         factura.setCliente(cliente);

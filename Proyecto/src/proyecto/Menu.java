@@ -130,7 +130,7 @@ public class Menu {
 
             switch (opcion) {
                 case 1:
-                    r.agregarUsuarios();
+                    r.agregarEncargados();
                     break;
                 case 2:
                     r.consultarEncargados();
