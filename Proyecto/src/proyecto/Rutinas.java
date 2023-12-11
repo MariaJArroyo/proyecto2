@@ -3,7 +3,7 @@ package proyecto;
 public class Rutinas {
 
     private String deporte;
-    private float tiempo;
+    private String tiempo;
     private String descripcion;
     private String nombreRutina;
     private boolean estado = false;
@@ -11,8 +11,8 @@ public class Rutinas {
     public Rutinas() {
         this.descripcion = " ";
         this.deporte = " ";
-        this.nombreRutina=" ";
-        this.tiempo = 0.00f;
+        this.nombreRutina = " ";
+        this.tiempo = " ";
     }
 
     public String getDeporte() {
@@ -21,14 +21,6 @@ public class Rutinas {
 
     public void setDeporte(String deporte) {
         this.deporte = deporte;
-    }
-
-    public float getTiempo() {
-        return tiempo;
-    }
-
-    public void setTiempo(float tiempo) {
-        this.tiempo = tiempo;
     }
 
     public boolean isEstado() {
@@ -53,6 +45,14 @@ public class Rutinas {
 
     public void setNombreRutina(String nombreRutina) {
         this.nombreRutina = nombreRutina;
+    }
+
+    public String getTiempo() {
+        return tiempo;
+    }
+
+    public void setTiempo(String tiempo) {
+        this.tiempo = tiempo;
     }
 
 }

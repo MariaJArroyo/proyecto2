@@ -1,6 +1,5 @@
 package proyecto;
 
-
 public class Facturas {
 
     private String Hora;

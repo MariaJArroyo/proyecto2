@@ -78,7 +78,6 @@ public class Menu {
                 }
             }
         }
-
     }
 
     public void menuDeportista() {
@@ -114,10 +113,8 @@ public class Menu {
                 }
             }
         }
-
     }
 
-    //ARREGLAR MENU ENCARGADO
     public void menuEncargado() {
 
         int opcion = 0;
@@ -151,10 +148,8 @@ public class Menu {
                 }
             }
         }
-
     }
 
-    //ARREGLAR MENU DEPORTE
     public void menuDeporte() {
 
         int opcion = 0;
@@ -188,7 +183,6 @@ public class Menu {
                 }
             }
         }
-
     }
 
     public void menuRutinas() {
@@ -224,10 +218,8 @@ public class Menu {
                 }
             }
         }
-
     }
 
-    //ARREGLAR MENU FACTURACIÓN
     public void menuFacturacion() {
 
         int opcion = 0;
@@ -235,7 +227,7 @@ public class Menu {
             opcion = Integer.parseInt(JOptionPane.showInputDialog(null,
                     "---Menu Facturación---\n"
                     + "1-Agregar Factura\n"
-                    + "2- Mostar facturaR\n"
+                    + "2-Mostar facturar\n"
                     + "3- Anular factura\n"
                     + "4- Salir\n"
                     + "Elija una opcion :)"));
@@ -258,5 +250,4 @@ public class Menu {
             }
         }
     }
-
 }

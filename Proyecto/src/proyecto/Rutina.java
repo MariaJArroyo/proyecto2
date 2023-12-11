@@ -4,14 +4,14 @@ import javax.swing.JOptionPane;
 
 public class Rutina {
 
-// Arreglos de objetos de Usuarios
-    private Usuarios infoUsuarios[] = new Usuarios[1];
-    private Deportistas deportistas[] = new Deportistas[1];
-    private Encargados Encargados[] = new Encargados[1];
-    private Deportes Deportes[] = new Deportes[1];
-    private Rutinas Rutinas[] = new Rutinas[1];
-    private Facturas Facturas[] = new Facturas[1];
+    private Usuarios infoUsuarios[] = new Usuarios[2];
+    private Deportistas deportistas[] = new Deportistas[2];
+    private Encargados Encargados[] = new Encargados[2];
+    private Deportes Deportes[] = new Deportes[2];
+    private Rutinas Rutinas[] = new Rutinas[2];
+    private Facturas Facturas[] = new Facturas[2];
 
+    // Arreglos de objetos de Usuarios
     public void agregarUsuarios() {
         for (int i = 0; i < infoUsuarios.length; i++) {
             Usuarios usuario = new Usuarios();
@@ -29,7 +29,7 @@ public class Rutina {
         boolean encontro = false;
         for (int i = 0; i < infoUsuarios.length; i++) {
             if (infoUsuarios[i].getNombre().equals(usuarioConsultar)) {
-                JOptionPane.showMessageDialog(null, "---Usuario---\n"+"Nombre: " + infoUsuarios[i].getNombre() + "\nApellidos: " + infoUsuarios[i].getApellidos()
+                JOptionPane.showMessageDialog(null, "---Usuario---\n" + "Nombre: " + infoUsuarios[i].getNombre() + "\nApellidos: " + infoUsuarios[i].getApellidos()
                         + "\nUsurio: " + infoUsuarios[i].getUsuario() + "\nContraseña: " + infoUsuarios[i].getContrasena());
                 encontro = true;
 
@@ -76,7 +76,7 @@ public class Rutina {
         boolean encontro = false;
         for (int i = 0; i < deportistas.length; i++) {
             if (deportistas[i].getNombreNino().equals(DeportistaConsultar)) {
-                JOptionPane.showMessageDialog(null, "---Deportista---\n"+"Nombre: " + deportistas[i].getNombreNino() + " " + deportistas[i].getApellidos()
+                JOptionPane.showMessageDialog(null, "---Deportista---\n" + "Nombre: " + deportistas[i].getNombreNino() + " " + deportistas[i].getApellidos()
                         + "\nCiudad: " + deportistas[i].getCiudad() + "\nDireccion: " + deportistas[i].getDireccion()
                         + "\nCorreo Electronico:" + deportistas[i].getCorreoElectronico() + "\nNumero de telefono: " + deportistas[i].getTelefono());
                 encontro = true;
@@ -91,7 +91,7 @@ public class Rutina {
         String deportistaEditar = JOptionPane.showInputDialog(null, "Digite el deportista que desea cambiar de la informacion: ");
         boolean encontro = false;
         for (int i = 0; i < deportistas.length; i++) {
-            Deportistas deportista = new Deportistas();
+            Deportistas deportista =deportistas [i];
             if (deportistas[i].getNombreNino().equals(deportistaEditar)) {
                 int opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "Desea cambiar el nombre?\n 1-Si\n 2-No\n\n Ingrese una Opcion"));
                 if (opcion == 1) {
@@ -164,7 +164,7 @@ public class Rutina {
         boolean encontro = false;
         for (int i = 0; i < Encargados.length; i++) {
             if (Encargados[i].getNombreEncargado().equals(EncargadoConsultar)) {
-                JOptionPane.showMessageDialog(null, "---Encargado--\n-"+"Nombre: " + Encargados[i].getNombreEncargado() + " " + Encargados[i].getApellidos()
+                JOptionPane.showMessageDialog(null, "---Encargado--\n-" + "Nombre: " + Encargados[i].getNombreEncargado() + " " + Encargados[i].getApellidos()
                         + "\nEl nombre del nino que esta acargo" + Encargados[i].getNinoCargo() + " \nLa ciudad que reside: " + Encargados[i].getCiudad()
                         + "\nLa direccion en la que reside: " + Encargados[i].getDireccion() + "\nSu numero de telefono es: " + Encargados[i].getTelefono()
                         + " \nSu correo electronico es:" + Encargados[i].getCorreoElectronico());
@@ -180,7 +180,7 @@ public class Rutina {
         String encargadoEditar = JOptionPane.showInputDialog(null, "Digite el Encargado que desea cambiar de la informacion: ");
         boolean encontro = false;
         for (int i = 0; i < Encargados.length; i++) {
-            Encargados encargado = new Encargados();
+            Encargados encargado =Encargados[i];
             if (deportistas[i].getNombreNino().equals(encargadoEditar)) {
                 int opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "Desea cambiar el nombre?\n 1-Si\n 2-No\n\n Ingrese una Opcion"));
                 if (opcion == 1) {
@@ -188,7 +188,7 @@ public class Rutina {
                 }
                 opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "Desea cambiar los Apellidos?\n 1-Si\n 2-No\n\n Ingrese una Opcion"));
                 if (opcion == 1) {
-                    encargado.setApellidos(JOptionPane.showInputDialog(null, " Escriba los nuevos Apellidos del Encargado:  "));
+                    encargado.setApellidos(JOptionPane.showInputDialog(null, "Escriba los nuevos Apellidos del Encargado:  "));
                 }
                 opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "Desea cambia la ciudad en la que reside?\n 1-Si\n 2-No\n\n Ingrese una Opcion"));
                 if (opcion == 1) {
@@ -247,7 +247,7 @@ public class Rutina {
         boolean encontro = false;
         for (int i = 0; i < Deportes.length; i++) {
             if (Deportes[i].getNombreDeporte().equals(nombreDeporte)) {
-                JOptionPane.showMessageDialog(null, "---Deporte---\n"+"El" + " " + Deportes[i].getNombreDeporte() + "\nTiene como caracteristicas:" + Deportes[i].getCaracteristicas());
+                JOptionPane.showMessageDialog(null, "---Deporte---\n" + "El" + " " + Deportes[i].getNombreDeporte() + "\nTiene como caracteristicas:" + Deportes[i].getCaracteristicas());
                 encontro = true;
             }
         }
@@ -260,7 +260,7 @@ public class Rutina {
         String deporteEditar = JOptionPane.showInputDialog(null, "Digite el deporte que desea editar: ");
         boolean encontro = false;
         for (int i = 0; i < Deportes.length; i++) {
-            Deportes deporte = new Deportes();
+            Deportes deporte = Deportes[i];
             if (Deportes[i].getNombreDeporte().equals(deporteEditar)) {
                 int opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "Desea cambiar el nombre del deporte?\n 1-Si\n 2-No\n\n Ingrese una Opcion"));
                 if (opcion == 1) {
@@ -317,9 +317,8 @@ public class Rutina {
             } while (existe = false);
             r.setNombreRutina(JOptionPane.showInputDialog(null, "Digite el nombre de la rutina: "));
             r.setDescripcion(JOptionPane.showInputDialog(null, "Digite la descripcion de la rutina: "));
-            r.setTiempo(Float.parseFloat(JOptionPane.showInputDialog(null, "Digite el tiempo: ")));
-            Rutinas[i]=r;
-
+            r.setTiempo(JOptionPane.showInputDialog(null, "Digite el tiempo: "));
+            Rutinas[i] = r;
         }
     }
 
@@ -328,7 +327,7 @@ public class Rutina {
         boolean encontro = false;
         for (int i = 0; i < Rutinas.length; i++) {
             if (Rutinas[i].getNombreRutina().equals(nombreRutina)) {
-                JOptionPane.showMessageDialog(null, "---Rutina---\n"+"El nombre de la rutina es: " + Rutinas[i].getNombreRutina() + "\nSu descripcion es: " + Rutinas[i].getDescripcion()
+                JOptionPane.showMessageDialog(null, "---Rutina---\n" + "El nombre de la rutina es: " + Rutinas[i].getNombreRutina() + "\nSu descripcion es: " + Rutinas[i].getDescripcion()
                         + "\nY su tiempo de duracion es de: " + Rutinas[i].getTiempo());
                 encontro = true;
             }
@@ -342,7 +341,7 @@ public class Rutina {
         String rutinaEditar = JOptionPane.showInputDialog(null, "Digite la rutina a editar: ");
         boolean encontro = false;
         for (int i = 0; i < Rutinas.length; i++) {
-            Rutinas rutina = new Rutinas();
+            Rutinas rutina = Rutinas[i];
             if (Rutinas[i].getNombreRutina().equals(rutinaEditar)) {
                 int opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "Desea cambiar el nombre de la Rutina?\n 1-Si\n 2-No\n\n Ingrese una Opcion"));
                 if (opcion == 1) {
@@ -354,7 +353,7 @@ public class Rutina {
                 }
                 opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "Desea cambiar el tiempo de la rutina?\n 1-Si\n 2-No\n\n Ingrese una Opcion"));
                 if (opcion == 1) {
-                    rutina.setTiempo(Float.parseFloat(JOptionPane.showInputDialog(null, " Escriba el nuevo tiempo de la rutina:  ")));
+                    rutina.setTiempo(JOptionPane.showInputDialog(null, " Escriba el nuevo tiempo de la rutina:  "));
                 }
                 Rutinas[i] = rutina;
                 encontro = true;
@@ -387,7 +386,6 @@ public class Rutina {
         JOptionPane.showMessageDialog(null, "---- Factura----");
         for (int i = 0; i < Facturas.length; i++) {
             Facturas factura = new Facturas();
-
             factura.setHora(JOptionPane.showInputDialog(null, "Digite la hora de pago: "));
             factura.setFecha(JOptionPane.showInputDialog(null, "Digite la fecha de pago: "));
             factura.setNumero_Factura(JOptionPane.showInputDialog(null, "Digite el número de factura: "));
@@ -406,8 +404,10 @@ public class Rutina {
                 if (existe == false) {
                     JOptionPane.showMessageDialog(null, "La rutina " + rutina + ", no existe. Por favor volver a digitarla");
                 }
+
             } while (existe == false);
             existe = false;
+
             do {
                 String cliente = JOptionPane.showInputDialog(null, "Digite el cliente (nombre del niño): ");
                 for (int j = 0; j < deportistas.length; j++) {
@@ -447,14 +447,13 @@ public class Rutina {
                     }
                 }
 
-                JOptionPane.showMessageDialog(null, "---Factura---\n"+" Numero de factura: " + Facturas[i].getNumero_Factura() + "\nNombre del cliente:" + Facturas[i].getCliente() + "\nDirección del cliente:" + d.getDireccion()
-                        + "\nFecha: " + Facturas[i].getFecha() + "\nHora: " + Facturas[i].getHora() + "\n Pago mensual: " + Facturas[i].getPago_Mensual()
-                        + "\n Rutina: " + Facturas[i].getRutina() + "\n Descripción: " + r.getDescripcion());
+                JOptionPane.showMessageDialog(null, "---Factura---\n" + "Numero de factura: " + Facturas[i].getNumero_Factura() + "\nNombre del cliente: " + Facturas[i].getCliente() + "\nFecha: " + Facturas[i].getFecha()
+                        + "\nHora: " + Facturas[i].getHora() + "\nPago mensual: " + Facturas[i].getPago_Mensual() + "\nRutina: " + Facturas[i].getRutina() + "\nDescripción: " + r.getDescripcion());
                 encontro = true;
             }
         }
         if (encontro == false) {
-            JOptionPane.showMessageDialog(null, "No hay ningun dato con el nombre: " + consultarFactura);
+            JOptionPane.showMessageDialog(null, "No hay ningun dato con el numero de Factura: " + consultarFactura);
         }
     }
 

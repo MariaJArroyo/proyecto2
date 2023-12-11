@@ -1,9 +1,11 @@
 /*
+Grupo 2
 Maria Jose Arroyo Campos
 Lester Guerrero Fernandez
 Jeremy Emmanuel Lorente Cerdad
 Dagoberto Andres Morera Alvarez
  */
+
 package proyecto;
 
 public class Main {
@@ -12,6 +14,5 @@ public class Main {
 
         Menu m = new Menu();
         m.MostrarMenu();
-
     }
 }
