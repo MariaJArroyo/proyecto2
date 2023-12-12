@@ -150,7 +150,7 @@ public class Rutina {
             JOptionPane.showMessageDialog(null, "Se solicitarán los datos del Encargado");
             encargado.setNombreEncargado(JOptionPane.showInputDialog(null, " Escriba el nombre del encargado:  "));
             encargado.setApellidos(JOptionPane.showInputDialog(null, " Escriba los Apellidos del encargado: "));
-            encargado.setNinoCargo(JOptionPane.showInputDialog(null, " Escriba el nombre del nino del que esta acargo : "));
+            encargado.setNinoCargo(JOptionPane.showInputDialog(null, " Escriba el nombre del nino del que esta acargo: "));
             encargado.setCiudad(JOptionPane.showInputDialog(null, " Escriba la ciudad de residencia del encargado: "));
             encargado.setDireccion(JOptionPane.showInputDialog(null, " Escriba la direccion del encargado: "));
             encargado.setTelefono(Integer.parseInt(JOptionPane.showInputDialog(null, " Digite numero telefonico del encargado: ")));
@@ -164,8 +164,8 @@ public class Rutina {
         boolean encontro = false;
         for (int i = 0; i < Encargados.length; i++) {
             if (Encargados[i].getNombreEncargado().equals(EncargadoConsultar)) {
-                JOptionPane.showMessageDialog(null, "---Encargado--\n-" + "Nombre: " + Encargados[i].getNombreEncargado() + " " + Encargados[i].getApellidos()
-                        + "\nEl nombre del nino que esta acargo" + Encargados[i].getNinoCargo() + " \nLa ciudad que reside: " + Encargados[i].getCiudad()
+                JOptionPane.showMessageDialog(null, "---Encargado---\n" + "Nombre: " + Encargados[i].getNombreEncargado() + " " + Encargados[i].getApellidos()
+                        + "\nEl nombre del nino que esta acargo: " + Encargados[i].getNinoCargo() + " \nLa ciudad que reside: " + Encargados[i].getCiudad()
                         + "\nLa direccion en la que reside: " + Encargados[i].getDireccion() + "\nSu numero de telefono es: " + Encargados[i].getTelefono()
                         + " \nSu correo electronico es:" + Encargados[i].getCorreoElectronico());
                 encontro = true;
@@ -181,7 +181,7 @@ public class Rutina {
         boolean encontro = false;
         for (int i = 0; i < Encargados.length; i++) {
             Encargados encargado = Encargados[i];
-            if (deportistas[i].getNombreNino().equals(encargadoEditar)) {
+            if (Encargados[i].getNombreEncargado().equals(encargadoEditar)) {
                 int opcion = Integer.parseInt(JOptionPane.showInputDialog(null, "Desea cambiar el nombre?\n 1-Si\n 2-No\n\n Ingrese una Opcion"));
                 if (opcion == 1) {
                     encargado.setNombreEncargado(JOptionPane.showInputDialog(null, " Escriba el nuevo nombre del encargado:  "));
@@ -247,7 +247,7 @@ public class Rutina {
         boolean encontro = false;
         for (int i = 0; i < Deportes.length; i++) {
             if (Deportes[i].getNombreDeporte().equals(nombreDeporte)) {
-                JOptionPane.showMessageDialog(null, "---Deporte---\n" + "El" + " " + Deportes[i].getNombreDeporte() + "\nCuenta con estas caracteristicas:" + Deportes[i].getCaracteristicas());
+                JOptionPane.showMessageDialog(null, "---Deporte---\n" + "El" + " " + Deportes[i].getNombreDeporte() + "\nCuenta con estas caracteristicas: " + Deportes[i].getCaracteristicas());
                 encontro = true;
             }
         }
